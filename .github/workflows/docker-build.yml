@@ -26,11 +26,11 @@ jobs:
       with:
         context: ./backend
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/my-backend:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/backend:latest
 
     - name: Build and push frontend
       uses: docker/build-push-action@v5
       with:
         context: ./frontend
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/my-frontend:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/frontend:latest
